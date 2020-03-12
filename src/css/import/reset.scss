@@ -1,0 +1,13 @@
+@use 'utf-8';
+/****************
+reset
+*****************/
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none !important; 
+  &:hover{
+    text-decoration: none;
+  }
+}

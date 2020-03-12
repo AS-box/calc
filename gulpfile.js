@@ -12,7 +12,7 @@ gulp.task('sass', function(){
 
 //自動監視
 gulp.task('sass-watch', ['sass'], function(){
-  let watcher = gulp.watch('./src/**/css/*.scss', ['sass']);
+  let watcher = gulp.watch('./src/css/**/*.scss', ['sass']);
   watcher.on('change', function(event) {
   });
 });
@@ -27,16 +27,16 @@ gulp.task('server', function() {
     }));
 });
 
-gulp.task('nunjucks', function () {
-  return gulp.src([
-    'src/template/**/*.html',
-    '!src/template/**/_*.html',
-  ])
-    .pipe(nunjucksRender({
-      path: ['src/template/']
-    }))
-    .pipe(gulp.dest('dist/'));
-});
+// gulp.task('nunjucks', function () {
+//   return gulp.src([
+//     'src/template/**/*.html',
+//     '!src/template/**/_*.html',
+//   ])
+//     .pipe(nunjucksRender({
+//       path: ['src/template/']
+//     }))
+//     .pipe(gulp.dest('dist/'));
+// });
 
 // gulp.task('nunjucks', function () {
 //   return gulp.src([
