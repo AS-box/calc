@@ -90,11 +90,11 @@
 /*!************************!*\
   !*** ./src/js/main.js ***!
   \************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module_calc_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module/calc.js */ \"./src/js/module/calc.js\");\n\n\n\n\n\nwindow.onload = () =>{\n  const calc = new _module_calc_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](24, 35);\n\n  calc.result();\n}\n\n//# sourceURL=webpack:///./src/js/main.js?");
+eval("\n\nvar _calc = __webpack_require__(/*! ./module/calc.js */ \"./src/js/module/calc.js\");\n\nvar _calc2 = _interopRequireDefault(_calc);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nwindow.onload = function () {\n  var calc = new _calc2.default(54, 54);\n\n  calc.result();\n};\n\n//# sourceURL=webpack:///./src/js/main.js?");
 
 /***/ }),
 
@@ -102,11 +102,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /*!*******************************!*\
   !*** ./src/js/module/calc.js ***!
   \*******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n\n\nclass Calc{\n  constructor(leftNum, rightNum){\n    this.leftNum = leftNum;\n    this.rightNum = rightNum\n  }\n  get result(){\n    this.increment()\n  }\n  increment(){\n    console.log(this.leftNum + this.rightNum)\n  }\n}\n/* harmony default export */ __webpack_exports__[\"default\"] = (Calc);\n\n//# sourceURL=webpack:///./src/js/module/calc.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Calc = function () {\n  function Calc(leftNum, rightNum) {\n    _classCallCheck(this, Calc);\n\n    this.leftNum = leftNum;\n    this.rightNum = rightNum;\n  }\n\n  _createClass(Calc, [{\n    key: 'increment',\n    value: function increment() {\n      console.log(this.leftNum + this.rightNum);\n    }\n  }, {\n    key: 'result',\n    get: function get() {\n      this.increment();\n    }\n  }]);\n\n  return Calc;\n}();\n\nexports.default = Calc;\n\n//# sourceURL=webpack:///./src/js/module/calc.js?");
 
 /***/ })
 

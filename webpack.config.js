@@ -16,5 +16,16 @@ module.exports = {
     filename: 'main.js',
     // 出力先のパス（絶対パスを指定する必要がある）
     path: path.join(__dirname, 'dist/js')
-  }, 
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
+      }
+    ]
+  }
 };
